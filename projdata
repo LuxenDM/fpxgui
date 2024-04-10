@@ -1,0 +1,20 @@
+fpxgui (FPX Mod Manager) is the frontend for fpxcmd (Fate Patcher Core), and functions as a lightweight mod manager. 
+
+Goals:
+  1) Provide an interface to inspect and manage installed mods
+    a) Drag-and-drop interface to add new mods
+      > Must allow folder dropping and zip archive dropping
+    b) Vertical Tab-based structure:
+      [home]: master menu to deploy, launch the game or tools, open game/mods/data folders, and access community links. If master isn't detected, prompts user to 'initialize'
+      [mods]: Shows list of current mods with checkbox to enable/disable. clicking opens a sub-pane that shows mod description and details.
+      [changes]: The [mods] list is duplicated when the user makes a change to their modlist. Must press "apply" to save changes.
+      [settings]: settings to manage fpxgui and fpxcmd. some settings are visible in 'expert' which lists key/value pair, with the value being editable
+  2) Remove the need for the user to use fpx core directly
+    > changing mod flags is handled by directly editing the modlist.json file.
+    > changing settings is controlled through the settings tab.
+    > -scan is triggered by user manually in the mods/changes tab
+    > -deploy is triggered by user manually when clicking the deploy button
+    > shortcuts the -remove command on the mods tab
+    > -index should be handled by mods generally, but could be adjusted in settings - expert settings
+    > Provides interface options to pick files and directories where needed.
+
